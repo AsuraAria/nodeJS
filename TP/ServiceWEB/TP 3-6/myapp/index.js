@@ -62,8 +62,9 @@ app.set('view engine', 'ejs');
 // GET
 
 app.get('/', (req, res) => {
-	res.render('pages/form', { list: data });
+	res.render('index.ejs');
 });
+
 
 // POST
 	/// open default page given
