@@ -92,5 +92,9 @@ node_modules/
 
 # Les odt du profs
 *.odt
+
+# Utilitaire
 Insomnia.lnk
+
+# Code de Tony Chouteau (https://github.com/TonyChouteau/nodebot-website)
 nodebot-website-master.zip
