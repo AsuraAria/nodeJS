@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>Create a new Task</h1>
+    	<form action="" method="POST">
+    		<label>Title : </label>
+    		<input type="text" name="title"/> <br>
+    		<input type="submit" value="Trololo"/>
+    	</form>
+    </div>
+    <div class="jumbotron">
+        <h1>Create a new User</h1>
+    	<form action="" method="POST">
+    		<label>User : </label>
+    		<input type="text" name="userId"/> <br>
+            <input type="text" name="password"/> <br>
+    		<input type="submit" value="Trololo"/>
+    	</form>
+    </div>
+    <div>
+    	<ul>
+    	<% list.forEach(function(task) { %>
+        <li>
+            <%= task.id %>
+            <strong><%= task.title %></strong>
+            (on <%= task.date %>)
+             <form action="/delete" method="POST">
+                <input type="hidden" name="id" value="<%= task.id %>"/>
+                <input type="submit" value="delete"/>
+            </form>
+        </li>
+    <% }); %>
+        </ul>
+    </div>
+
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

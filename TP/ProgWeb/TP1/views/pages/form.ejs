@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>Create a new Person</h1>
+    	<form action="" method="POST">
+    		<label>Name : </label>
+    		<input type="text" name="name"/> <br>
+    		<label>Firstname : </label>
+    		<input type="text" name="firstname"/> <br>
+    		<input type="submit"/>
+    	</form>
+    </div>
+    <div>
+    	<ul>
+    	<% list.forEach(function(person) { %>
+        <li>
+            <strong><%= person.name %></strong>
+            <%= person.firstname %>
+        </li>
+    <% }); %>
+        </ul>
+    </div>
+
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
